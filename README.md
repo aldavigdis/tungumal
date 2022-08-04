@@ -3,6 +3,16 @@
 
 Skráin [languages.is.yml](languages.is.yml) inniheldur lista yfir heiti tungumála sem hafa fengið úthlutaðan tveggja stafa kóða skv ISO-639 á Íslensku.
 
+## Notkun í Ruby on Rails
+
+Hægt er að setja skránna beint inn í möppuna `./config/locales/` í Ruby on Rails verkefni. Þá er hægt að birta nafn hvers tungumáls út frá kóða með því að nota fallið `I18n.t`:
+
+```ruby
+language = 'en'
+I18n.t("languages.#{language}")
+=> 'Enska'
+```
+
 ## Vantar eitthvað?
 
 Skráin var skrifuð eftir bestu getu, en ef þú finnur villur eða vilt koma með tillögur að betri nöfnum, þá má senda pull request á https://github.com/aldavigdis/tungumal/.
